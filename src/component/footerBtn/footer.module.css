@@ -1,0 +1,18 @@
+.footerBtn{
+  height: 61px;
+  background-color: #004cff;
+  color: #f3f3f3;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: Nunito-Sans;
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 31px;
+  text-align: center;
+  text-decoration-skip-ink: none;
+}

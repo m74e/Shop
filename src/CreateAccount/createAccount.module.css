@@ -1,0 +1,101 @@
+.continerCreateAccount {
+  width: 375px;
+  padding: 0px 20px;
+  margin: auto;
+}
+.contant {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+.textContent {
+  margin-top: 122px;
+  display: flex;
+  justify-content: left;
+  align-items: flex-start;
+  text-align: left;
+}
+.bluePostion {
+  position: fixed;
+  right: 0;
+  top: 41px;
+}
+.greyPostion {
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+.text {
+  z-index: 2;
+}
+.cameraPostion {
+  position: fixed;
+  left: 30px;
+  top: 273px;
+}
+.inputs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 7.91px;
+  margin-top: 249px;
+  width: 100%;
+}
+.emailInput {
+  width: 100%;
+  height: 61px;
+  border: none;
+  outline: none;
+  background-color: #f8f8f8;
+  padding-left: 18px;
+  color: #d2d2d2;
+  border-radius: 24px;
+}
+.Eye {
+  position: absolute;
+  bottom: 22px;
+  right: 24px;
+  cursor: pointer;
+}
+.footerBtn {
+  width: 50%;
+  height: 61px;
+  background-color: #004cff;
+  color: #ffffff;
+  border: none;
+}
+.cancle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.contantOfInput {
+  width: 100%;
+  height: 61px;
+  border: none;
+  background-color: #f8f8f8;
+  color: #d2d2d2;
+  border-radius: 24px;
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  padding-left: 18px;
+}
+.line {
+  height: 30px;
+  width: 2px;
+  background-color: #1f1f1f;
+  border-radius: 16px;
+}
+.lastInput {
+  background-color: #f8f8f8;
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  border-radius: 24px;
+}
