@@ -7,9 +7,8 @@ import FooterBtn from "../component/footerBtn/footerBtn";
 import Iraq from "../customsIcon/Iraq";
 import Eye from "../customsIcon/lineOnEye";
 import { Link } from "react-router";
-import useStore from "../zustand/zustand";
 const createAccount = () => {
-  const { dec } = useStore();
+  
   return (
     <>
       <div className={styles.continerCreateAccount}>
@@ -53,8 +52,7 @@ const createAccount = () => {
           </FooterBtn>
         </Link>
         <div className={styles.cancle}>
-          <button onClick={dec}>back</button>
-          <p>cancle</p>
+          <Link to="/">cancle</Link>
         </div>{" "}
       </div>
     </>

@@ -9,11 +9,18 @@ import "./App.css";
 const App = () => {
   const { count } = useStore();
 
+  const stateMangment = () => {
+    if (count === 1) {
+      return <Login />;
+    } else if (count === 2) {
+      return <CreateAccount />;
+    }
+  };
+
   return (
     <BrowserRouter>
       <Routes>
-        {count === 1 && <Route path="/" element={<Login />} />}
-        {count === 2 && <Route path="/" element={<CreateAccount />} />}
+        <Route path="/" element={stateMangment()} />
         <Route path="/shop" element={<ShopStore />} />
       </Routes>
     </BrowserRouter>

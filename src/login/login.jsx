@@ -24,7 +24,7 @@ const login = () => {
           <div className={styles.register}>
             <p>I already have an account</p>
             <div className={styles.registerIcon}>
-              <RightArrow />
+              <RightArrow/>
             </div>
           </div>
         </div>

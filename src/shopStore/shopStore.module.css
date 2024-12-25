@@ -1,0 +1,87 @@
+.content {
+}
+.mainFlexForCircl {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 9px;
+  flex-wrap: wrap;
+}
+.flexForCircl {
+  width: 60px;
+  height: 60px;
+  background-color: #ffffff;
+  box-shadow: 0px 5px 10px 0px #00000029;
+  border-radius: 50%;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.imgContent{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+.flexBody {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.headerBody {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.mainBody {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+}
+.allItems {
+  font-family: Raleway;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: -0.20999999344348907px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+.filter {
+  cursor: pointer;
+}
+.body {
+  margin-top: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.squer {
+  width: 165px;
+  height: 181px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0px 5px 10px 0px #0000001a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.insideBody {
+  width: 165px;
+}
+.contantAndPrice {
+  margin-top: 6px;
+  font-family: Nunito Sans;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+}
+.price {
+    margin-top: 6px;
+  font-family: Raleway;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 21px;
+  letter-spacing: -0.17000000178813934px;
+}
