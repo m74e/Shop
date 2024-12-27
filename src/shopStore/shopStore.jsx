@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./shopStore.module.css";
 import Container from "../component/container/container.jsx";
 import Filter from "../customsIcon/filter.jsx";
 import Girl from "/public/girl.svg";
 import Shose from "/public/shoes.svg";
+import FooterShop from "../component/footerShop/footerShop.jsx";
+import ProductVariations from "../UI/productVariations.jsx";
+import Clothes from "../assets/clothes.jpg"
 const shopStore = () => {
+  const [isModule, setIsModule] = useState(false);
+  const [convert, setConvert] = useState("");
   const Clothestype = [
     {
       id: 1,
@@ -66,22 +71,22 @@ const shopStore = () => {
       price: "17.00",
     },
     {
-      id: 1,
+      id: 2,
       img: Girl,
       des: "Lorem ipsum dolor sit amet consectetur",
       price: "17.00",
     },
     {
-      id: 1,
+      id: 3,
       img: Girl,
-      des: "Lorem ipsum dolor sit amet consectetur",
-      price: "17.00",
+      des: "Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet consecteturZLorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet consecteturZ",
+      price: "19.00",
     },
     {
-      id: 1,
+      id: 4,
       img: Girl,
-      des: "Lorem ipsum dolor sit amet consectetur",
-      price: "17.00",
+      des: "Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet consecteturZLorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet consecteturZLorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet consecteturZ",
+      price: "16.00",
     },
   ];
   return (
@@ -93,7 +98,9 @@ const shopStore = () => {
             <div className={styles.mainFlexForCircl}>
               {Clothestype.map((i) => (
                 <div className={styles.flexBody}>
-                  <div className={styles.flexForCircl}><img className={styles.imgContent} src={i.img} alt="" /></div>
+                  <div className={styles.flexForCircl}>
+                    <img className={styles.imgContent} src={i.img} alt="" />
+                  </div>
                   <p>{i.type}</p>
                 </div>
               ))}
@@ -108,7 +115,10 @@ const shopStore = () => {
             </div>
             <div className={styles.body}>
               {items.map((i) => (
-                <div className={styles.insideBody}>
+                <div
+                  className={styles.insideBody}
+                  onClick={() => setIsModule(!isModule)}
+                >
                   <div className={styles.squer}>
                     <img src={i.img} alt="" />
                   </div>
@@ -122,6 +132,16 @@ const shopStore = () => {
           </div>
         </div>
       </Container>
+      {isModule && (
+        <ProductVariations
+          Img={Girl}
+          onClick={() => setIsModule(!isModule)}
+          Hight="60%"
+        >
+          <img src={Clothes} alt="" />
+        </ProductVariations>
+      )}
+      <FooterShop isModule={isModule} />
     </>
   );
 };

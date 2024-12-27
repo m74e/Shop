@@ -22,6 +22,9 @@ const App = () => {
       <Routes>
         <Route path="/" element={stateMangment()} />
         <Route path="/shop" element={<ShopStore />} />
+        {/* <Route path="/Fav" element={<Fav />} />
+        <Route path="/sheet" element={<Sheet/>} />
+        <Route path="/cart" element={<Cart/>} /> */}
       </Routes>
     </BrowserRouter>
   );
