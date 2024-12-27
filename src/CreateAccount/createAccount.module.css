@@ -2,6 +2,7 @@
   width: 375px;
   padding: 0px 20px;
   margin: auto;
+  height: 100vh;
 }
 .contant {
   display: flex;
@@ -33,6 +34,9 @@
   position: fixed;
   left: 30px;
   top: 273px;
+  border: 2px dashed #004CFF;
+  border-radius: 50%;
+  padding: 18px 18px;
 }
 .inputs {
   display: flex;
@@ -40,7 +44,7 @@
   align-items: center;
   flex-direction: column;
   gap: 7.91px;
-  margin-top: 249px;
+  margin-top: 210px;
   width: 100%;
 }
 .emailInput {
@@ -98,4 +102,17 @@
   width: 100%;
   height: 100%;
   border-radius: 24px;
+}
+.countryFlag{
+  width:35px ;
+  height: 25px;
+  border-radius: 2px;
+}
+.sortImgs{
+  display: flex;
+  align-items: center;
+ gap: 10px;
+}
+.dArrow{
+  cursor: pointer;
 }

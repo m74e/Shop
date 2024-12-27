@@ -1,0 +1,32 @@
+.mainFooter {
+  height: 54px;
+  position: fixed;
+  bottom: 0;
+  background-color: #ffffff;
+  width: 100%;
+  box-shadow: 0px -1px 1px 0px #0000001a;
+  display: none;
+}
+.globelFooter {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footerImg {
+  width: 20px;
+  height: 20px;
+}
+
+.footerImgAct {
+  width: 20px;
+  height: 20px;
+  border-bottom: 2px solid #060606;
+  padding-bottom: 4px;
+}
+
+@media (max-width: 600px) {
+  .mainFooter {
+    display: block;
+  }
+}
