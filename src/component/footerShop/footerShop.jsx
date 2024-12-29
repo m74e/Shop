@@ -13,10 +13,10 @@ const footerShop = ({isModule}) => {
 
   return (
     <>
-      {" "}
-      <div className={styles.mainFooter} style={{display:`${isModule ? "none" :"block"}`}}>
+      {/* {" "}style={{display:`${isModule? "none" :"block"}`}} */}
+      <div className={styles.mainFooter} >
         <Container> 
-          <div className={styles.globelFooter}>
+          <div className={styles.globelFooter} >
             <Link to="/shop">
               {" "}
               {location == "/shop" ? (

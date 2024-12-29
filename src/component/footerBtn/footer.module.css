@@ -15,4 +15,5 @@
   line-height: 31px;
   text-align: center;
   text-decoration-skip-ink: none;
+  z-index: 9;
 }
