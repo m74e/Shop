@@ -1,7 +1,8 @@
-import Login from "./login/login";
+import Regster from "./pages/startPage/startPage";
 import useStore from "./zustand/zustand";
-import CreateAccount from "./CreateAccount/createAccount";
-import ShopStore from "./shopStore/shopStore";
+import CreateAccount from "./pages/CreateAccount/createAccount";
+import ShopStore from "./pages/shopStore/shopStore";
+import Login from "./pages/login/login";
 import { BrowserRouter, Routes, Route } from "react-router";
 
 import "./App.css";
@@ -11,7 +12,7 @@ const App = () => {
 
   const stateMangment = () => {
     if (count === 1) {
-      return <Login />;
+      return <Regster />;
     } else if (count === 2) {
       return <CreateAccount />;
     }
@@ -21,6 +22,7 @@ const App = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={stateMangment()} />
+        <Route path="/login" element={<Login />} />
         <Route path="/shop" element={<ShopStore />} />
         {/* <Route path="/Fav" element={<Fav />} />
         <Route path="/sheet" element={<Sheet/>} />

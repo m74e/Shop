@@ -1,17 +1,19 @@
 import React, { useState } from "react";
 import styles from "./createAccount.module.css";
-import RightBlueSmall from "../customsIcon/rightBlueSmall";
-import TopGrey from "../customsIcon/topGrey";
-import Camera from "../customsIcon/cameraPointerBorder";
-import FooterBtn from "../component/footerBtn/footerBtn";
-import Iraq from "../assets/iraq.png";
-import Eye from "../customsIcon/lineOnEye";
+import RightBlueSmall from "../../customsIcon/rightBlueSmall";
+import TopGrey from "../../customsIcon/topGrey";
+import Camera from "../../customsIcon/cameraPointerBorder";
+import FooterBtn from "../../component/footerBtn/footerBtn";
+import Iraq from "../../assets/Iraq.png";
+import Eye from "../../customsIcon/lineOnEye";
 import DownArrow from "/public/downArrow.svg";
 import { Link } from "react-router";
+import useStore from "../../zustand/zustand";
 const createAccount = () => {
   const [isPassword, setIsPassword] = useState("");
   const [isEmail, setIsEmail] = useState("");
   const [isNumber, setIsNumber] = useState("");
+const {inc}=useStore();
 
   return (
     <>
@@ -37,7 +39,7 @@ const createAccount = () => {
             />
             <Eye className={styles.Eye} />
             <input
-              type="text"
+              type="password"
               placeholder="Password"
               maxLength={16}
               minLength={8}
@@ -64,7 +66,7 @@ const createAccount = () => {
         <Link
           to={
             isPassword.length >= 8 &&
-            isEmail.length >= 11 &&
+            isEmail.length >= 16 &&
             isNumber.length >= 14
               ? "/shop"
               : "/"
@@ -75,7 +77,7 @@ const createAccount = () => {
           </FooterBtn>
         </Link>
         <div className={styles.cancle}>
-          <Link to="/">cancle</Link>
+          <div>cancle</div>
         </div>{" "}
       </div>
     </>

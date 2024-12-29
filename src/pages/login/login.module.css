@@ -1,0 +1,71 @@
+.bluePostion {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+.greyPostion {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.rightPostion {
+  position: fixed;
+  right: 0;
+  bottom: 276px;
+}
+.rightPostion {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+.mainLogin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 300px;
+  z-index: 5;
+  gap: 18px;
+}
+.inputEmail {
+  z-index: 5;
+  border: none;
+  outline: none;
+  border-radius: 59.12px;
+  padding-left: 18px;
+  width: 334px;
+  height: 52.22px;
+  background-color: #f8f8f8;
+}
+.headerOfLogin {
+  z-index: 6;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  justify-content: left;
+  align-self: flex-start;
+  gap: 12px;
+}
+.contentOfLogin {
+  z-index: 6;
+  text-align: left;
+}
+
+.linkZIndex {
+  z-index: 7;
+  width: 100%;
+  text-decoration: none;
+}
+.cancelBtn {
+  z-index: 7;
+  font-family: Nunito Sans;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 26px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #202020;
+}

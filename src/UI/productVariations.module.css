@@ -11,8 +11,12 @@
   width: 100%;
   background-color: #ffffff;
   border-radius: 16px 16px 0px 0px;
+  z-index: 3;
 }
 .imgOfModule{
     width: 100%;
-    height:100% ;
+    height:50%;  
+}
+.flexModule{
+  display: flex;
 }
