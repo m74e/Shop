@@ -4,7 +4,7 @@ import RightBlueSmall from "../../customsIcon/rightBlueSmall";
 import TopGrey from "../../customsIcon/topGrey";
 import Camera from "../../customsIcon/cameraPointerBorder";
 import FooterBtn from "../../component/footerBtn/footerBtn";
-import Iraq from "../../assets/Iraq.png";
+import Iraq from "../../assets/iraq.png";
 import Eye from "../../customsIcon/lineOnEye";
 import DownArrow from "/public/downArrow.svg";
 import { Link } from "react-router";
