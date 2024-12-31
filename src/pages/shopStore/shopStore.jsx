@@ -7,11 +7,15 @@ import Shose from "/public/shoes.svg";
 import FooterShop from "../../component/footerShop/footerShop.jsx";
 import ProductVariations from "../../UI/productVariations.jsx";
 import Clothes from "../../assets/clothes.jpg";
-
+import corrct from "/public/corrct.svg";
+import Like from "../../customsIcon/like";
+import { Link } from "react-router";
 const shopStore = () => {
   const [isModule, setIsModule] = useState(false);
   const [convert, setConvert] = useState({});
   const [tranform, setTranform] = useState(false);
+  const [isCorrect, setIsCorrect] = useState(false);
+  const [count, setCount] = useState(0);
   const [mTranform, setMTranform] = useState(false);
   const [lTranform, setLTranform] = useState(false);
   const [xlTranform, setXLTranform] = useState(false);
@@ -102,7 +106,6 @@ const shopStore = () => {
       price: "16.00",
     },
   ];
-
   return (
     <>
       <Container>
@@ -161,10 +164,66 @@ const shopStore = () => {
           <div className={styles.mainInfoOfModule}>
             <h2>Color Options</h2>
             <div className={styles.colorOptions}>
-              <img className={styles.colorClothes} src={Clothes} alt="" />
-              <img className={styles.colorClothes} src={Clothes} alt="" />
-              <img className={styles.colorClothes} src={Clothes} alt="" />
-              <img className={styles.colorClothes} src={Clothes} alt="" />
+              <div
+                className={styles.insideColorOptions}
+                onClick={() => setIsCorrect(!isCorrect)}
+              >
+                <img
+                  className={
+                    isCorrect
+                      ? styles.correctPostion
+                      : styles.noneCorrectPostion
+                  }
+                  src={corrct}
+                  alt=""
+                />
+                <img src={Clothes} alt="" className={styles.colorClothes} />
+              </div>
+              <div
+                className={styles.insideColorOptions}
+                onClick={() => setIsCorrect(!isCorrect)}
+              >
+                <img
+                  className={
+                    isCorrect
+                      ? styles.correctPostion
+                      : styles.noneCorrectPostion
+                  }
+                  src={corrct}
+                  alt=""
+                />
+                <img src={Clothes} alt="" className={styles.colorClothes} />
+              </div>
+              <div
+                className={styles.insideColorOptions}
+                onClick={() => setIsCorrect(!isCorrect)}
+              >
+                <img
+                  className={
+                    isCorrect
+                      ? styles.correctPostion
+                      : styles.noneCorrectPostion
+                  }
+                  src={corrct}
+                  alt=""
+                />
+                <img src={Clothes} alt="" className={styles.colorClothes} />
+              </div>
+              <div
+                className={styles.insideColorOptions}
+                onClick={() => setIsCorrect(!isCorrect)}
+              >
+                <img
+                  className={
+                    isCorrect
+                      ? styles.correctPostion
+                      : styles.noneCorrectPostion
+                  }
+                  src={corrct}
+                  alt=""
+                />
+                <img src={Clothes} alt="" className={styles.colorClothes} />
+              </div>
             </div>
             <div className={styles.size}>
               <button
@@ -181,27 +240,74 @@ const shopStore = () => {
                 M
               </button>
               <button
-                onClick={() =>setXLTranform(!xlTranform)}
-                className={xlTranform ? styles.actInsideSize : styles.insideSize}
+                onClick={() => setLTranform(!lTranform)}
+                className={lTranform ? styles.actInsideSize : styles.insideSize}
+              >
+                L
+              </button>
+              <button
+                onClick={() => setXLTranform(!xlTranform)}
+                className={
+                  xlTranform ? styles.actInsideSize : styles.insideSize
+                }
               >
                 XL
               </button>
               <button
                 onClick={() => setXXLTranform(!xxlTranform)}
-                className={xxlTranform ? styles.actInsideSize : styles.insideSize}
+                className={
+                  xxlTranform ? styles.actInsideSize : styles.insideSize
+                }
               >
                 XXL
               </button>
               <button
                 onClick={() => setXXXLTranform(!xxxlTranform)}
-                className={xxxlTranform ? styles.actInsideSize : styles.insideSize}
+                className={
+                  xxxlTranform ? styles.actInsideSize : styles.insideSize
+                }
               >
                 XXXL
               </button>
             </div>
             <div className={styles.quantity}>
-             <div> <h3>Quantity</h3></div>
-              <div ></div>
+              <div>
+                {" "}
+                <h3>Quantity</h3>
+              </div>
+
+              <div className={styles.counter}>
+                <div
+                  onClick={() => setCount(count - 1)}
+                  className={styles.quantityMinus}
+                >
+                  -
+                </div>
+                <div className={styles.quantitySquer}>
+                  <p>{count}</p>
+                </div>
+                <div
+                  onClick={() => setCount(count + 1)}
+                  className={styles.quantityPlus}
+                >
+                  +
+                </div>
+              </div>
+            </div>
+            <div className={styles.footerModule}>
+              <div className={styles.likeFooter}>
+                <Like />
+              </div>{" "}
+              <div>
+                {" "}
+                <button className={styles.footerAddBtn}>Add to cart</button>
+              </div>
+              <div>
+                <Link to={"/cart"}>
+                  {" "}
+                  <button className={styles.footerBuyBtn}>Buy now</button>
+                </Link>
+              </div>
             </div>
           </div>
         </ProductVariations>
