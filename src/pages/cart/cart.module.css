@@ -1,0 +1,58 @@
+.mainCart {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.headerCart {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 8px;
+}
+.headerCount {
+  background-color: #e5ebfc;
+  color: #000000;
+  font-family: Raleway;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: -0.18000000715255737px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.address {
+  margin-top: 14px;
+  width: 335px;
+  height: 70px;
+  background-color: #F9F9F9;
+  border-radius: 10px;
+  padding: 8px 14px;
+}
+.Shipping{
+    font-family: Raleway;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: -0.14000000059604645px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+     
+}
+.testAddress{
+    font-family: Nunito Sans;
+font-size: 10px;
+font-weight: 400;
+line-height: 15px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+}
+
