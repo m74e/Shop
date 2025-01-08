@@ -31,28 +31,196 @@
   margin-top: 14px;
   width: 335px;
   height: 70px;
-  background-color: #F9F9F9;
+  background-color: #f9f9f9;
   border-radius: 10px;
   padding: 8px 14px;
 }
-.Shipping{
-    font-family: Raleway;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 18px;
-    letter-spacing: -0.14000000059604645px;
-    text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-     
+.Shipping {
+  font-family: Raleway;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: -0.14000000059604645px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
 }
-.testAddress{
-    font-family: Nunito Sans;
-font-size: 10px;
-font-weight: 400;
-line-height: 15px;
-text-align: left;
-text-underline-position: from-font;
-text-decoration-skip-ink: none;
+.testAddress {
+  font-family: Nunito Sans;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 15px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
 }
-
+.mainContent {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.imgOfContent {
+  position: relative;
+  background-color: #ffffff;
+  width: 129px;
+  height: 120px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px 0px #0000001a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  padding: 10px 4px;
+}
+.deleteContent {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  background-color: #ffffff;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.imgContent {
+  width: 100%;
+  height: auto;
+}
+.nameOfProdect {
+  font-family: Nunito Sans;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #000000;
+}
+.flexText {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.textContent {
+  display: flex;
+  flex-direction: column;
+  gap: 52px;
+}
+.decOfProdect {
+  font-family: Raleway;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: -0.14000000059604645px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+.price {
+  font-family: Raleway;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: -0.18000000715255737px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.priceAndCount {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.counter {
+  width: 37px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e5ebfc;
+  border-radius: 8px;
+}
+.counterBox {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.minus {
+  border: 2px solid #004cff;
+  border-radius: 50%;
+  padding: 8px 14px;
+  color: #004cff;
+}
+.plus {
+  border: 2px solid #004cff;
+  border-radius: 50%;
+  padding: 8px 14px;
+  color: #004cff;
+}
+.total {
+  position: fixed;
+  bottom: 54px;
+  width: 100%;
+  height: 60px;
+  background-color: #f5f5f5;
+  padding: 0px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.totalText {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #000000;
+  font-family: Raleway;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 26px;
+  letter-spacing: -0.20000000298023224px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+.totalPrice {
+  color: #202020;
+  font-family: Raleway;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: -0.18000000715255737px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+.Checkout {
+  background-color: #004cff;
+  width: 128px;
+  height: 40px;
+  border-radius: 12px;
+  border: none;
+  color: #f3f3f3;
+  cursor: pointer;
+}
+.pay {
+  background-color: #202020;
+  width: 128px;
+  height: 40px;
+  border-radius: 12px;
+  border: none;
+  color: #f3f3f3;
+  font-family: Nunito Sans;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 25px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  cursor: pointer;
+}
