@@ -7,7 +7,9 @@ import Sheet from "/public/sheet.svg";
 import Cart from "/public/cart.svg";
 import person from "/public/person.svg";
 import Container from "../container/container";
+import actCart from "/public/actCart.svg"
 import { useLocation, Link } from "react-router";
+
 const footerShop = ({isModule}) => {
   const location = useLocation();
 
@@ -19,10 +21,10 @@ const footerShop = ({isModule}) => {
           <div className={styles.globelFooter} >
             <Link to="/shop">
               {" "}
-              {location == "/shop" ? (
-                <img className={styles.footerImg} src={Home} alt="" />
-              ) : (
+              {location.pathname == "/shop" ? (
                 <img className={styles.footerImgAct} src={ActHome} alt="" />
+              ) : (
+                <img className={styles.footerImg} src={Home} alt="" />
               )}
             </Link>
             <Link to="">
@@ -33,7 +35,8 @@ const footerShop = ({isModule}) => {
               {" "}
               <img className={styles.footerImg} src={Sheet} alt="" />
             </Link>
-            <Link to="">
+            
+            <Link to="/cart">
               {" "}
               <img className={styles.footerImg} src={Cart} alt="" />
             </Link>
