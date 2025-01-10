@@ -207,6 +207,13 @@
   border: none;
   color: #f3f3f3;
   cursor: pointer;
+  font-family: Nunito Sans;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 25px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
 }
 .pay {
   background-color: #202020;

@@ -27,7 +27,7 @@ const footerShop = ({isModule}) => {
                 <img className={styles.footerImg} src={Home} alt="" />
               )}
             </Link>
-            <Link to="">
+            <Link to="/fav">
               {" "}
               <img className={styles.footerImg} src={Heart} alt="" />
             </Link>
@@ -40,7 +40,7 @@ const footerShop = ({isModule}) => {
               {" "}
               <img className={styles.footerImg} src={Cart} alt="" />
             </Link>
-            <Link to="">
+            <Link to="/profile">
               <img className={styles.footerImg} src={person} alt="" />
             </Link>
           </div>

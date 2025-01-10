@@ -27,19 +27,19 @@ const cart = () => {
       id: 1,
       name: "Lorem ipsum dolor sit amet consectetur.",
       dec: "Pink, Size M",
-      price: "17,00",
+      price: 17.45,
     },
     {
       id: 2,
       name: "Lorem ipsum dolor sit amet consectetur.",
       dec: "Pink, Size M",
-      price: "999,99",
+      price:99.78,
     },
   ];
 
-  const confilct=()=>{
-    
-  }
+  const totalPrice= infoCart.reduce((acc, item) => acc + item.price, 0);
+
+  // console.log(totalPrice);
 
   return (
     <>
@@ -63,7 +63,7 @@ const cart = () => {
               </div>
             ))}
           </div>
-          {isCart && (
+          {isCart == true && (
             <>
               {infoCart.map((i) => (
                 <div className={styles.mainContent}>
@@ -107,26 +107,25 @@ const cart = () => {
       <div className={styles.total}>
         <div className={styles.totalText}>
           <h3>Total</h3>
-          <p className={styles.totalPrice}>$9999</p>
+          <p className={styles.totalPrice}>${totalPrice}</p>
         </div>
-        {isCart && (
+        {isCart == true && (
           <div>
             <button
               className={styles.Checkout}
-              onClick={() => setIsCart(!isCart)  }
+              onClick={() => setIsCart(!isCart)}
             >
               Checkout
             </button>
           </div>
         )}
-        <div>
-          <button
-            className={styles.pay}
-            onClick={() => setIsCart(!isCart)}
-          >
-            Checkout
-          </button>
-        </div>
+        {isCart == false && (
+          <div>
+            <button className={styles.pay} onClick={() => setIsCart(!isCart)}>
+              Checkout
+            </button>
+          </div>
+        )}
       </div>
 
       <Footer />
