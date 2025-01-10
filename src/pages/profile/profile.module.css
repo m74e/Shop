@@ -1,0 +1,74 @@
+.mainProfile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.imgContainer {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.profileImg {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  box-shadow: 0px 0px 15px 0px #00000029;
+
+}
+.contentOfRight {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.vouchers {
+  font-family: Raleway;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: -0.20999999344348907px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+.chooser {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.box {
+  cursor: pointer;
+  background-color: #004cff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 50%;
+}
+.lines {
+  cursor: pointer;
+  background-color: #e5ebfc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 10px;
+  border-radius: 50%;
+}
+.Sitting {
+  cursor: pointer;
+  background-color: #e5ebfc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 50%;
+}

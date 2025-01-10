@@ -4,6 +4,8 @@ import CreateAccount from "./pages/CreateAccount/createAccount";
 import ShopStore from "./pages/shopStore/shopStore";
 import Login from "./pages/login/login";
 import Cart from "./pages/cart/cart";
+import Fav from "./pages/fav/fav";
+import Profile from "./pages/profile/profile"
 import { BrowserRouter, Routes, Route } from "react-router";
 
 import "./App.css";
@@ -26,6 +28,9 @@ const App = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/shop" element={<ShopStore />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/fav" element={<Fav />} />
+        <Route path="/profile" element={<Profile />} />
+
         {/* <Route path="/Fav" element={<Fav />} />
         <Route path="/sheet" element={<Sheet/>} /> */}
       </Routes>

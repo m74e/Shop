@@ -104,7 +104,30 @@ const shopStore = () => {
       img: Girl,
       des: " Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet consecteturZLorem",
       price: "16.00",
+    },    {
+      id: 6,
+      img: Girl,
+      des: " Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet consecteturZLorem",
+      price: "16.00",
     },
+    {
+      id: 7,
+      img: Girl,
+      des: " Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet consecteturZLorem",
+      price: "16.00",
+    },
+    {
+      id: 8,
+      img: Girl,
+      des: " Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet consecteturZLorem",
+      price: "16.00",
+    },
+    // {
+    //   id: 9,
+    //   img: Girl,
+    //   des: " Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet consecteturZLorem",
+    //   price: "16.00",
+    // },
   ];
   return (
     <>
