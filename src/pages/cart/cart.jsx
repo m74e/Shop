@@ -6,7 +6,7 @@ import Delete from "/public/delete.svg";
 import Footer from "../../component/footerShop/footerShop";
 
 const cart = () => {
-  const [number, setNumber] = useState(0);
+  const [number, setNumber] = useState(1);
   const [isCart, setIsCart] = useState(true);
   const counter = [
     {
@@ -33,11 +33,11 @@ const cart = () => {
       id: 2,
       name: "Lorem ipsum dolor sit amet consectetur.",
       dec: "Pink, Size M",
-      price:99.78,
+      price: 99.78,
     },
   ];
 
-  const totalPrice= infoCart.reduce((acc, item) => acc + item.price, 0);
+  const totalPrice = infoCart.reduce((acc, item) => acc + item.price, 0);
 
   // console.log(totalPrice);
 
@@ -83,14 +83,26 @@ const cart = () => {
                       <div className={styles.counterBox}>
                         <div
                           className={styles.minus}
-                          onClick={() => setNumber(number - 1)}
+                          onClick={() => {
+                            if (number == 1) {
+                              return;
+                            } else {
+                              setNumber(number - 1);
+                            }
+                          }}
                         >
                           -
                         </div>
                         <div className={styles.counter}>{number}</div>
                         <div
                           className={styles.plus}
-                          onClick={() => setNumber(number + 1)}
+                          onClick={() => {
+                            if (number == 10) {
+                              return;
+                            } else {
+                              setNumber(number + 1);
+                            }
+                          }}
                         >
                           +
                         </div>

@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./productVariations.module.css";
 import Container from "../component/container/container";
-const productVariations = ({ children, Hight = "auto", onClick, Img }) => {
+const productVariations = ({ children, Hight = "auto", onClick, Img,items }) => {
   return (
     <>
     <div className={styles.flexModule}>
