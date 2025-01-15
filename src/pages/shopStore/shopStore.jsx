@@ -10,6 +10,118 @@ import Clothes from "../../assets/clothes.jpg";
 import corrct from "/public/corrct.svg";
 import Like from "../../customsIcon/like";
 import { Link } from "react-router";
+import useStore from "../../zustand/zustand";
+
+const Clothestype = [
+  {
+    id: 1,
+    img: Shose,
+    type: "Dresses",
+  },
+  {
+    id: 2,
+    img: Shose,
+    type: "Dresses",
+  },
+  {
+    id: 3,
+    img: Shose,
+    type: "Dresses",
+  },
+  {
+    id: 4,
+    img: Shose,
+    type: "Dresses",
+  },
+  {
+    id: 5,
+    img: Shose,
+    type: "Dresses",
+  },
+  {
+    id: 6,
+    img: Shose,
+    type: "Dresses",
+  },
+  {
+    id: 7,
+    img: Shose,
+    type: "Dresses",
+  },
+  {
+    id: 8,
+    img: Shose,
+    type: "Dresses",
+  },
+  {
+    id: 9,
+    img: Shose,
+    type: "Dresses",
+  },
+  {
+    id: 10,
+    img: Shose,
+    type: "Dresses",
+  },
+];
+
+const items = [
+  {
+    id: 1,
+    img: Girl,
+    des: "Lorem ipsum dolor sit amet consectetur",
+    price: "17.00",
+  },
+  {
+    id: 2,
+    img: Shose,
+    des: "Lorem ipsum dolor sit amet consectetur",
+    price: "17.00",
+  },
+  {
+    id: 3,
+    img: Girl,
+    des: "Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet consecteturZLorem",
+    price: "19.00",
+  },
+  {
+    id: 4,
+    img: Girl,
+    des: " Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet consecteturZLorem",
+    price: "16.00",
+  },
+  {
+    id: 5,
+    img: Girl,
+    des: " Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet consecteturZLorem",
+    price: "16.00",
+  },
+  {
+    id: 6,
+    img: Girl,
+    des: " Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet consecteturZLorem",
+    price: "16.00",
+  },
+  {
+    id: 7,
+    img: Girl,
+    des: " Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet consecteturZLorem",
+    price: "16.00",
+  },
+  {
+    id: 8,
+    img: Girl,
+    des: " Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet consecteturZLorem",
+    price: "16.00",
+  },
+  {
+    id: 9,
+    img: Girl,
+    des: " Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet consecteturZLorem",
+    price: "16.00",
+  },
+];
+
 const shopStore = () => {
   const [isModule, setIsModule] = useState(false);
   const [convert, setConvert] = useState({});
@@ -21,114 +133,25 @@ const shopStore = () => {
   const [xlTranform, setXLTranform] = useState(false);
   const [xxlTranform, setXXLTranform] = useState(false);
   const [xxxlTranform, setXXXLTranform] = useState(false);
-  const Clothestype = [
-    {
-      id: 1,
-      img: Shose,
-      type: "Dresses",
-    },
-    {
-      id: 2,
-      img: Shose,
-      type: "Dresses",
-    },
-    {
-      id: 3,
-      img: Shose,
-      type: "Dresses",
-    },
-    {
-      id: 4,
-      img: Shose,
-      type: "Dresses",
-    },
-    {
-      id: 5,
-      img: Shose,
-      type: "Dresses",
-    },
-    {
-      id: 6,
-      img: Shose,
-      type: "Dresses",
-    },
-    {
-      id: 7,
-      img: Shose,
-      type: "Dresses",
-    },
-    {
-      id: 8,
-      img: Shose,
-      type: "Dresses",
-    },
-    {
-      id: 9,
-      img: Shose,
-      type: "Dresses",
-    },
-    {
-      id: 10,
-      img: Shose,
-      type: "Dresses",
-    },
-  ];
+  const { wishList, setWishList } = useStore();
+  const [imgs,setImgs]=useState();
 
-  const items = [
-    {
-      id: 1,
-      img: Girl,
-      des: "Lorem ipsum dolor sit amet consectetur",
-      price: "17.00",
-    },
-    {
-      id: 2,
-      img: Shose,
-      des: "Lorem ipsum dolor sit amet consectetur",
-      price: "17.00",
-    },
-    {
-      id: 3,
-      img: Girl,
-      des: "Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet consecteturZLorem",
-      price: "19.00",
-    },
-    {
-      id: 4,
-      img: Girl,
-      des: " Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet consecteturZLorem",
-      price: "16.00",
-    },
-    {
-      id: 5,
-      img: Girl,
-      des: " Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet consecteturZLorem",
-      price: "16.00",
-    },    {
-      id: 6,
-      img: Girl,
-      des: " Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet consecteturZLorem",
-      price: "16.00",
-    },
-    {
-      id: 7,
-      img: Girl,
-      des: " Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet consecteturZLorem",
-      price: "16.00",
-    },
-    {
-      id: 8,
-      img: Girl,
-      des: " Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet consecteturZLorem",
-      price: "16.00",
-    },
-    // {
-    //   id: 9,
-    //   img: Girl,
-    //   des: " Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet consecteturZLorem",
-    //   price: "16.00",
-    // },
-  ];
+  const handle = wishList.find((i) => i.id === imgs?.id);
+
+  const setFav = () => {
+    let newArr = [];
+    if (handle) {
+      // Remove 
+      newArr = wishList.filter((i) => i.id !== imgs.id);
+    } else {
+      // Add
+      newArr = [...wishList, imgs];
+    }
+
+    setWishList(newArr); // Update the wishlist in the state
+    localStorage.setItem("kidh", JSON.stringify(newArr)); // Save the updated list to localStorage
+  };
+
   return (
     <>
       <Container>
@@ -139,7 +162,7 @@ const shopStore = () => {
             </div>
             <div className={styles.mainFlexForCircl}>
               {Clothestype.map((i) => (
-                <div className={styles.flexBody}>
+                <div className={styles.flexBody} key={i.id}>
                   <div className={styles.flexForCircl}>
                     <img className={styles.imgContent} src={i.img} alt="" />
                   </div>
@@ -157,10 +180,10 @@ const shopStore = () => {
             </div>
             <div className={styles.body}>
               {items.map((i) => (
-                <div
+                <div key={i.id}
                   className={styles.insideBody}
                   onClick={() => {
-                    setIsModule(!isModule), setConvert(i);
+                    setIsModule(!isModule), setConvert(i),setImgs(i);
                   }}
                 >
                   <div className={styles.squer}>
@@ -178,10 +201,12 @@ const shopStore = () => {
       </Container>
       {isModule && (
         <ProductVariations
+
           Img={convert.img}
           onClick={() => {
             setIsModule(!isModule), setConvert({});
           }}
+          items={items}
           Hight="60%"
         >
           <div className={styles.mainInfoOfModule}>
@@ -318,7 +343,7 @@ const shopStore = () => {
               </div>
             </div>
             <div className={styles.footerModule}>
-              <div className={styles.likeFooter}>
+              <div className={styles.likeFooter} onClick={setFav}>
                 <Like />
               </div>{" "}
               <div>
